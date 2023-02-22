@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">Buyer's Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="Mobile">Mobile</label>
+            <input type="number" id="mNum">
+
+            <label for="country">Address</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label class="checkbox-container">Due
+                <input id="due" type="checkbox" >
+                <span class="checkmark"></span>
+            </label>
+            <!-- <p id="text" style="display:none">No due</p> -->
+
+            <h3>Payment Method</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+
+            <!-- itemsregion -->
+
+            <div id="items">
+                <!-- <div id="item">
+                    <button class="close-btn">&times;</button>
+                    <label for="fname">Product Name</label>
+                    <input type="text" id="fname" name="productname" placeholder="Product name..">
+
+                    <label for="Details">Description</label>
+                    <input type="text">
+
+                    <label for="Quantity">Quantity</label>
+                    <input type="number">
+
+                    <label for="Price">Rate</label>
+                    <input type="number">
+
+                    <label for="Total">Amount</label>
+                    <input type="number">
+                </div> -->
+            </div>
+
+            <!-- endregion -->
+
+            <input id="clone_btn" type="button" value="+" onclick="cloneFunction()">
+            <input id="submit_btn" type="submit" value="Submit">
+
+            <div id="msg">
+                <pre></pre>
+            </div>
+
+
+        </form>
+    </div>
+
+    <!-- <label for="myCheck">Due:</label>  -->
+    <!-- <input type="checkbox" id="myCheck" onclick="myFunction()"> -->
+
+    <script src="script.js">
+
+    </script>
+
+
+    <div class="template-item d-none">
+    <!-- <div class="item item-1"> -->
+        <!-- close button goes here -->
+        <label for="fname">Product Name</label>
+        <input type="text" class="item-name" name="productname" placeholder="Product name..">
+
+        <label for="Details">Description</label>
+        <input type="text" class="item-details">
+
+        <label for="Quantity">Quantity</label>
+        <input type="number" class="item-quantity">
+
+        <label for="Price">Rate</label>
+        <input type="number" class="item-price">
+
+        <label for="Total">Amount</label>
+        <input type="number" class="item-total">
+    </div>
+
+
+    <button class="close-btn d-none">&times;</button>
+</body>
+
+</html>
